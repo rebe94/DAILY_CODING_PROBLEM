@@ -4,15 +4,15 @@ public class Solution {
 
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5};
-        //int[] result = processWithoutDivision(array);
-        int[] result = processWithDivision(array);
+        //int[] result = getProductOfAllOtherElementsWithoutDivision(array);
+        int[] result = getProductOfAllOtherElementsWithDivision(array);
 
         for (int i : result) {
             System.out.print(i + " ");
         }
     }
 
-    public static int[] processWithDivision(int[] array) {
+    public static int[] getProductOfAllOtherElementsWithDivision(int[] array) {
         int[] resultArray = new int[array.length];
         int product = 1;
 
@@ -28,7 +28,7 @@ public class Solution {
         return resultArray;
     }
 
-    public static int[] processWithoutDivision(int[] array) {
+    public static int[] getProductOfAllOtherElementsWithoutDivision(int[] array) {
         int[] resultArray = new int[array.length];
 
         for (int i = 0; i < array.length; i++) {

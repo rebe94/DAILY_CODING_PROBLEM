@@ -1,0 +1,17 @@
+Calculate Maximum Subarray Sum
+
+Given an array of numbers, find the maximum sum of any contiguous subarray of the array.
+For exmaple, given the array [34, -50, 42, 14, -5, 86],
+the maximum sum would be 137, since we would take elements 42, 14, -5 and 86.
+Given the array [-5, -1, -8, -9],
+the maximum sum would be 0, since we would choose not to take any elements.
+
+Do this in O(n) time.
+
+
+Rozwiązanie opisowe:
+1. Musimy rejestrować sumę ciągu (zmienna), który aktualnie sumujemy liczba po liczbie i sprawdzać czy ma on sens być dalej sumowany.
+Jeśli sumujemy kolejno np. 5 liczb, a okaże się że 6-ta liczba jest większa od sumy tych pięciu to znaczy, że kontynuacja sumowania tego ciągu nie ma sensu.
+Wtedy zaczynamy sumować ciąg od tej 6-tej liczby, która jest dotychczas największą sumą (jednoelementową na ten moment).
+2. Musimy sprawdzać największą sumę dotychczas zauważoną (zmienna), ponieważ możemy danego ciągu nie przerywać z powodu wystąpienia jakiejś ujemnej liczby.
+Co iterację musimy aktualizować tę największą zauważoną sumę.

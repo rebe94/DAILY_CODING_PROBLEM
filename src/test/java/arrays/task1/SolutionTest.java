@@ -10,7 +10,7 @@ class SolutionTest {
     void returnProductOfNumbersWithDivision() {
         int[] numbers = {1,2,3,4,5};
         int[] numbersExpected = {120,60,40,30,24};
-        int[] result = Solution.processWithDivision(numbers);
+        int[] result = Solution.getProductOfAllOtherElementsWithDivision(numbers);
 
         assertArrayEquals(numbersExpected,result);
     }
@@ -19,7 +19,16 @@ class SolutionTest {
     void returnProductOfNumbersWithoutDivision() {
         int[] numbers = {1,2,3,4,5};
         int[] numbersExpected = {120,60,40,30,24};
-        int[] result = Solution.processWithoutDivision(numbers);
+        int[] result = Solution.getProductOfAllOtherElementsWithoutDivision(numbers);
+
+        assertArrayEquals(numbersExpected,result);
+    }
+
+    @Test
+    void a() {
+        int[] numbers = {3,2,1};
+        int[] numbersExpected = {2,3,6};
+        int[] result = Solution.getProductOfAllOtherElementsWithoutDivision(numbers);
 
         assertArrayEquals(numbersExpected,result);
     }
@@ -28,7 +37,7 @@ class SolutionTest {
     void returnArraysWithZerosWhenOneOfNumbersIsZero() {
         int[] numbers = {1,0,3,4,5};
         int[] numbersExpected = {0,0,0,0,0};
-        int[] result = Solution.processWithDivision(numbers);
+        int[] result = Solution.getProductOfAllOtherElementsWithDivision(numbers);
 
         assertArrayEquals(numbersExpected,result);
     }
